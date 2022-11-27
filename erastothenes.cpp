@@ -7,8 +7,8 @@
     [
      sieve of Erastothenes works by deleting the multiples
      of each primes(starting with 2), within a given range,
-     and displaying the left-over numbers(otherwise primes)
-     ]
+     and displaying the left-overs (in this case the primes)
+    ]
 */
 
 #include <iostream>
