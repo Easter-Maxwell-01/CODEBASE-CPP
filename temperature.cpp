@@ -5,8 +5,9 @@
 /*
     Program : temperature calculator (Fahrenheit, Celsius)
 */
-
-/*'Error --1' is just a random error message*/
+/*	
+	Note : Don't mind the design, just wanted something good looking!
+*/
 
 #include <iomanip>  
 #include <iostream> 
