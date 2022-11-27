@@ -18,8 +18,8 @@ int main()
 
     cout << "\n";
 
-	cout << "-[:]-Enter a number to multiply : ";
-	cin  >> number_to_multiply;
+    cout << "-[:]-Enter a number to multiply : ";
+    cin  >> number_to_multiply;
 
     cout << "\n";
 
@@ -35,5 +35,5 @@ int main()
 	}
 
 	return -1;
-
+	
 }
