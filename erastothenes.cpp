@@ -76,8 +76,9 @@ void display_all_primes()
 
 int main()
 {
-
+    /*get the title to the mid screen*/
     cout << "\n\t\t\t\t\t\t\t\t";
+    
     cout << "--- Results of Sieve of Erastothenes ---";
     cout << "\n\n";
 
