@@ -7,29 +7,50 @@
 */
 
 #include <iostream>
+#include <windows.h>
 
 using namespace std;
 
 int main()
 {
 	int index;
-	int limit = 13;
+    int limit = 9950;
+	int endpoint = 13;
 	int number_to_multiply;
 
     cout << "\n";
-
-    cout << "-[:]-Enter a number to multiply : ";
-    cin  >> number_to_multiply;
+    cout << "\t\t\t\t\t\t";
+    cout << "--- MULTIPLICATION TABLES ---";
 
     cout << "\n";
 
-	cout << " Multiplication       Result" << endl;
-	cout << "------- --------     --------" << endl;
+    cout << "-[:]-Enter number to multiply : ";
+    cin  >> number_to_multiply;
 
-	for (index = 0; index < limit; index++)
+    if (number_to_multiply > limit)
+    {
+        Sleep(500);
+        
+        cout << "\n";
+        cout << "\a";
+        cout << "`--> Error : number entered is beyond limit [" << limit << "]!";
+
+        cout << endl;
+
+        exit(0);
+    }
+
+    cout << "\n";
+
+	cout << "  Multiplication       Result" << endl;
+	cout << "-------- ---------  ------------" << endl;
+
+	for (index = 0; index < endpoint; index++)
 	{
 		cout << "    " << number_to_multiply << " " << " * " << " " 
              << index << "\t\t" << number_to_multiply * index;
+        
+        Sleep(200);
 
 		cout << "\n";
 	}
