@@ -17,6 +17,7 @@ using namespace std;
 
 /*size of the sieve*/
 #define ARRAY_SIZE 700
+
 /*status of an index*/
 #define DELETED      0 
 
