@@ -65,6 +65,8 @@ void standard_output()
 		cout << "\t\t\t\t\t    ";
 		cout << "+--------------|-------------+";
 
+		cout << "\n";
+
 		fahr = fahr + order;
 	}
 
@@ -137,6 +139,8 @@ void user_specific_output()
 		cout << "\t\t\t\t\t    ";
 		cout << "+----------------------------+";
 
+		cout << "\n";
+
 	}
 
 	else if (option == "F" || option == "f")
@@ -169,6 +173,8 @@ void user_specific_output()
 		cout << "\n";
 		cout << "\t\t\t\t\t    ";
 		cout << "+----------------------------+";
+
+		cout << "\n";
 	}
 
 	else
