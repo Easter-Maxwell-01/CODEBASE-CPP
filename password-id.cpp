@@ -26,9 +26,9 @@ int main()
     int pwd_length;
 
     cout << "\n\t\t\t\t\t\t";
-    cout << "--- Password Generator ---";
+    cout << "--- PASSWORD GENERATOR ---";
 
-    cout << "\n";
+    cout << "\n\n";
 
     cout << "-[:]-Enter password length : ";
     cin  >> pwd_length; 
@@ -40,23 +40,25 @@ int main()
     {
         cout << "\n";
         cout << "|" << endl;
-        cout << "`--> Invalid password length!" << endl;
-        cout << "`--> Error : Password length less than 1";
+        cout << " `--> Invalid password length!" << endl;
+        cout << " `--> Error : Password length less than 1";
+        cout << "\n";
     }
 
     else if (pwd_length > 50)
     {
         cout << "\n";
         cout << "|" << endl;
-        cout << "`--> Invalid password length!" << endl;
-        cout << "`--> Error : Password length greater than 50";
+        cout << " `--> Invalid password length!" << endl;
+        cout << " `--> Error : Password length greater than 50";
+        cout << "\n";
     }
 
     else
     {
         cout << "\n";
         cout << "|" << endl;
-        cout << "`--> Generated Password : ";
+        cout << " `--> Generated Password : ";
 
         for (index = 0; index < pwd_length; index++)
         {
