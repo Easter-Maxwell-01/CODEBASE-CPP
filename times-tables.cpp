@@ -3,7 +3,7 @@
     Date : 27th November, 2022
 */
 /*
-	Program : Multiplication tables
+    Program : Multiplication tables
 */
 
 #include <iostream>
