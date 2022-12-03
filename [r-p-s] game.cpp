@@ -87,7 +87,7 @@ void replay_game_option()
         Sleep(500);
         cout << "`--> Program Terminated by default!" << endl;
 
-        Sleep(2000);
+        exit(500);
     }
 }
 
