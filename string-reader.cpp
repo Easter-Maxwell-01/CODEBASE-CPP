@@ -3,6 +3,8 @@
 	Date :3rd December, 2022
 
 	Program : String data reader
+	
+	[easiest, but not the most efficient way]
 */
 
 #include <iostream>
