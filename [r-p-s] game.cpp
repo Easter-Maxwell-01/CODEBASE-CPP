@@ -20,7 +20,9 @@
 
 using namespace std;
 
-int main(); /*prototype for the main function*/
+int main(); /*main function*/
+
+/*'\a' diplays error sounds*/
 
 void return_to_main_screen()
 {
@@ -80,10 +82,13 @@ void replay_game_option()
     else
     {
         Sleep(500);
+        
         cout << "\a";
         cout << "\n";
+        
         cout << "`--> Invalid option input!" << endl;
         cout << "`--> Error : Not a valid Option!" << endl;
+        
         Sleep(500);
         cout << "`--> Program Terminated by default!" << endl;
 
@@ -168,8 +173,10 @@ int main()
             if (option_input != "3" && option_input != "scissors")
             {
                 Sleep(500);
+                
                 cout << "\a";
                 cout << "\n" << endl;
+                
                 cout << "`--> Invalid option input!" << endl;
                 cout << "`--> Error : Not a valid Option!" << endl;
 
@@ -203,8 +210,10 @@ int main()
         else
         {
             Sleep(500);
+            
             cout << "\a";
             cout << "\n" << endl;
+            
             cout << "`--> Invalid option input!" << endl;
             cout << "`--> Error : Not a valid Option!" << endl;
         }
@@ -275,8 +284,10 @@ int main()
         else
         {
             Sleep(500);
+            
             cout << "\a";
             cout << "\n";
+            
             cout << "`--> Invalid option input!" << endl;
             cout << "`--> Error : Not a valid Option!" << endl;
         }
