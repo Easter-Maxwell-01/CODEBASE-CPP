@@ -49,6 +49,7 @@ void replay_game_option()
 
     for (index = 0; index < user_input.length(); index++)
     {
+        /*display user_input word for word*/
         cout << user_input[index];
 
         Sleep(100);
