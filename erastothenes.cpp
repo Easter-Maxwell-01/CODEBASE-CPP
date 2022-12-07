@@ -38,7 +38,7 @@ int delete_multiples(int prime)
     int index;
     int multiplier = 2;
 
-    /*if the index is the multiple of a prime , delete it!*/
+     /* checks if the index is the multiple of a prime , and then deletes it! */
     for (index = prime * multiplier; index < ARRAY_SIZE; index = prime * multiplier++)
     {
         sieve[index] = DELETED;
@@ -77,15 +77,20 @@ void display_all_primes()
 
 int main()
 {
-    /*get the title to the mid screen*/
+    /*get the title to mid screen*/
     cout << "\n\t\t\t\t\t\t\t\t";
     
     cout << "--- Results of Sieve of Erastothenes ---";
+    
     cout << "\n\n";
 
-    /*compulsory steps*/
+    /*step 1*/
     fill_sieve();
+    
+    /*step 2*/
     delete_non_primes();
+    
+    /*step 3*/
     display_all_primes();
 
     return -1;
