@@ -1,3 +1,4 @@
+
 /*
     Author : Easter Maxwell
     Date : 28th November, 2022
@@ -39,7 +40,7 @@ void return_to_main_screen()
 void replay_game_option()
 {
     int index;
-    string user_input = "\t\t\t\t        [:] DO YOU WANT TO PLAY AGAIN? [Y/N] -> ";
+    string user_input = "\t\t\t\t  [:] DO YOU WANT TO PLAY AGAIN? [Y/N] -> ";
 
     Sleep(3000);
 
@@ -83,13 +84,13 @@ void replay_game_option()
     else
     {
         Sleep(500);
-        
+
         cout << "\a";
         cout << "\n";
-        
+
         cout << "`--> Invalid option input!" << endl;
         cout << "`--> Error : Not a valid Option!" << endl;
-        
+
         Sleep(500);
         cout << "`--> Program Terminated by default!" << endl;
 
@@ -97,13 +98,26 @@ void replay_game_option()
     }
 }
 
+/*sets an accurate window size*/
+void set_window_size()
+{
+    RECT rector;
+    HWND console;
 
-int main()
+    console = GetConsoleWindow();
+    GetWindowRect(console, &rector);
+
+    MoveWindow(console, rector.bottom, rector.top, 900, 800, TRUE);
+}
+
+int main() 
 {
     int max_num = 3;
     int min_num = 1;
     string option_input;
     int computer_generator;
+
+    set_window_size();
 
     /*seeds the random generator*/
     srand(time(NULL));
@@ -127,25 +141,25 @@ int main()
     /*draws the board for the rules of the game*/
     cout << "\n";
     cout << "\t\t\t\t    "
-         << "+---------------------------------+"
-         << "\n"
-         << "\t\t\t\t    "
-         << "|[Rule 1] paper wins against rock |"
-         << "\n"
-         << "\t\t\t\t    "
-         << "+---------------------------------+"
-         << "\n"
-         << "\t\t\t\t    "
-         << "|[Rule 2] scissors against paper  |"
-         << "\n"
-         << "\t\t\t\t    "
-         << "+---------------------------------+"
-         << "\n"
-         << "\t\t\t\t    "
-         << "|[Rule 3] rocks against scissors  |"
-         << "\n"
-         << "\t\t\t\t    "
-         << "+---------------------------------+";
+        << "+---------------------------------+"
+        << "\n"
+        << "\t\t\t\t    "
+        << "|[Rule 1] paper wins against rock |"
+        << "\n"
+        << "\t\t\t\t    "
+        << "+---------------------------------+"
+        << "\n"
+        << "\t\t\t\t    "
+        << "|[Rule 2] scissors against paper  |"
+        << "\n"
+        << "\t\t\t\t    "
+        << "+---------------------------------+"
+        << "\n"
+        << "\t\t\t\t    "
+        << "|[Rule 3] rocks against scissors  |"
+        << "\n"
+        << "\t\t\t\t    "
+        << "+---------------------------------+";
 
     Sleep(2000);
 
@@ -164,7 +178,7 @@ int main()
     cout << "\n\n";
 
     cout << "[:]Enter option : ";
-    cin  >> option_input;
+    cin >> option_input;
 
     /*checks if the option_input is invalid*/
     if (option_input != "1" && option_input != "rock")
@@ -174,10 +188,10 @@ int main()
             if (option_input != "3" && option_input != "scissors")
             {
                 Sleep(500);
-                
+
                 cout << "\a";
                 cout << "\n" << endl;
-                
+
                 cout << "`--> Invalid option input!" << endl;
                 cout << "`--> Error : Not a valid Option!" << endl;
 
@@ -211,10 +225,10 @@ int main()
         else
         {
             Sleep(500);
-            
+
             cout << "\a";
             cout << "\n" << endl;
-            
+
             cout << "`--> Invalid option input!" << endl;
             cout << "`--> Error : Not a valid Option!" << endl;
         }
@@ -285,10 +299,10 @@ int main()
         else
         {
             Sleep(500);
-            
+
             cout << "\a";
             cout << "\n";
-            
+
             cout << "`--> Invalid option input!" << endl;
             cout << "`--> Error : Not a valid Option!" << endl;
         }
@@ -300,5 +314,4 @@ int main()
     }
 
     return -1;
-
 }
