@@ -17,12 +17,13 @@ void display_percent()
 	system("color 0A");
 
 	Sleep(300);
-
 	cout << " 100%";
 
 	Sleep(2000);
-
 	system("cls");
+	
+	/*back to normal*/
+	system("color 07")
 
 	exit(0);
 
@@ -42,6 +43,12 @@ int main()
 	for (index = 0; index < limit; index++)
 	{
 		cout << loader;
+		
+		/*makes it a bit more dramatic*/
+		if (index == 9 || index == 15)
+		{
+			Sleep(1500);
+		}
 
 		Sleep(300);
 	}
