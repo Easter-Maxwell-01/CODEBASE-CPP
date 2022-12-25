@@ -48,9 +48,9 @@ int main()
 
 	cout << "\n";
 
-	cout << "Odds found : " << odds << endl;
-	cout << "Evens found : " << evens << endl;
-	cout << "Zeros found : " << zeros << endl;
+	cout << "`--> Odds found : " << odds << endl;
+	cout << "`--> Evens found : " << evens << endl;
+	cout << "`--> Zeros found : " << zeros << endl;
 
 	return -1;
 
