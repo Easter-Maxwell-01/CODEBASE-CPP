@@ -47,38 +47,38 @@ int main()
 
 		/*checks for signs*/
 		else if (text[index] == '*' || text[index] == '+' || text[index]
-				 == '-' || text[index] == '/' || text[index] == '^')
+			 == '-' || text[index] == '/' || text[index] == '^')
 		{
 			signs += 1;
 		}
 
 		/*checks for vowels*/
 		else if (text[index] == 'a' || text[index] == 'i'|| text[index]
-			      == 'o' || text[index] == 'e' || text[index] == 'u' ||
-			     text[index] == 'A' || text[index] == 'I' || text[index]
-			     == 'O' || text[index] == 'E' || text[index] == 'O')
+			 == 'o' || text[index] == 'e' || text[index] == 'u' ||
+			 text[index] == 'A' || text[index] == 'I' || text[index]
+			 == 'O' || text[index] == 'E' || text[index] == 'O')
 		{
 			vowels += 1;
 		}
 
 		/*checks for digits*/
 		else if (text[index] == '0' || text[index] == '1' || text[index] 
-			     == '2' || text[index] == '3' || text[index] == '4' || 
-			     text[index] == '5' || text[index] == '6' || text[index] 
-			     == '7' || text[index] == '8' || text[index] == '9')
+			 == '2' || text[index] == '3' || text[index] == '4' || 
+			 text[index] == '5' || text[index] == '6' || text[index] 
+			 == '7' || text[index] == '8' || text[index] == '9')
 		{
 			digits += 1;
 		}
 
 		/*checks for symbols*/
 		else if (text[index] == '!' || text[index] == '@' || text[index] == '#' ||
-				 text[index] == '$' || text[index] == '%' || text[index] == ',' ||
-				 text[index] == '&' || text[index] == '?' || text[index] == '(' ||
-				 text[index] == ')' || text[index] == '.' || text[index] == '`' || 
-			     text[index] == '~' || text[index] == ':' || text[index] == ';' || 
-			     text[index] == '"' || text[index] == '{' || text[index] == '}' || 
-			     text[index] == '|' || text[index] == '_' || text[index] == '[' || 
-			     text[index] == ']' || text[index] == '<' || text[index] == '>')
+		         text[index] == '$' || text[index] == '%' || text[index] == ',' ||
+		         text[index] == '&' || text[index] == '?' || text[index] == '(' ||
+		         text[index] == ')' || text[index] == '.' || text[index] == '`' || 
+			 text[index] == '~' || text[index] == ':' || text[index] == ';' || 
+			 text[index] == '"' || text[index] == '{' || text[index] == '}' || 
+			 text[index] == '|' || text[index] == '_' || text[index] == '[' || 
+			 text[index] == ']' || text[index] == '<' || text[index] == '>')
 		{
 			symbols += 1;
 		}
