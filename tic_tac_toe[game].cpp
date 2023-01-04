@@ -17,7 +17,7 @@ char board[3][3] = { //rows - cols
                      {'1','2','3'},
                      {'4','5','6'},
                      {'7','8','9'}
-                   };
+};
 
 class Tic_Tac_Toe
 {
@@ -55,12 +55,6 @@ public:
             }
         }
 
-        /*
-        *       row o -> 1 2 3
-        *       row 1 -> 4 5 6
-        *       row 2 -> 7 8 9
-        */
-
         /*checking win for both diagonal*/
         if (board[0][0] == board[1][1] && board[0][0] == board[2][2] ||
             board[0][2] == board[1][1] && board[0][2] == board[2][0])
@@ -84,7 +78,8 @@ public:
         /*else*/
         draw = true;
 
-        return true; // since the game is on
+        return false; 
+
     }
 
     void players_turn()
@@ -113,9 +108,9 @@ public:
         case 8: row = 2; column = 1; break;
         case 9: row = 2; column = 2; break;
 
-        default :
+        default:
 
-            cout << "\n[:] Error : Invalid input!\n";
+            cout << "\n[:] Error : Invalid box input!\n";
 
             exit(0);
         }
@@ -140,48 +135,75 @@ public:
 
         else
         {
-            cout << "\n[:] Error : Box is already occupied!";
+            cout << "\n[:] Error : Box is occupied!";
             cout << endl;
-
-            players_turn();
         }
     }
-
 };
 
 int main()
 {
     /*class object*/
     Tic_Tac_Toe display;
-
-    cout << "[:]Players : [O - X]\n";
+    
+    cout << "|--------------------|" << endl;
+    cout << "|[:]Players : [O - X]|" << endl;
+    cout << "|--------------------|" << endl;
 
     while (display.game_on())
     {
         display.print_board();
 
         display.players_turn();
-
-        display.game_on();
-    }
-
-    /*checks if player x won the game*/
-    if (current_player == 'X' && draw == false)
-    {
-        cout << "\n[:] Decision : player o won the game!";
-        cout << endl;
     }
 
     /*checks if player o won the game*/
+    if (current_player == 'X' && draw == false)
+    {
+        display.print_board();
+
+        cout << "\n[:] Decision : player o won the game!";
+        cout << endl;
+
+        cout << "\t\t\t\t\t\t  +-------------+" << endl;
+        cout << "\t\t\t\t\t\t  |Current Board|" << endl;
+        cout << "\t\t\t\t\t\t  +-------------+" << endl;
+
+        cout << endl;
+
+        display.print_board();
+    }
+
+    /*checks if player x won the game*/
     else if (current_player == 'O' && draw == false)
     {
+        display.print_board();
+
         cout << "\n[:] Decision : player x won the game!";
         cout << endl;
+
+        cout << "\t\t\t\t\t\t  +-------------+" << endl;
+        cout << "\t\t\t\t\t\t  |Current Board|" << endl;
+        cout << "\t\t\t\t\t\t  +-------------+" << endl;
+
+        cout << endl;
+
+        display.print_board();
     }
 
     else
     {
-        cout << "\n[:] Decision : A draw!" << endl;
+        display.print_board();
+
+        cout << "\n[:] Decision : game ended a draw!" << endl;
+
+        cout << "\t\t\t\t\t\t  +-------------+" << endl;
+        cout << "\t\t\t\t\t\t  |Current Board|" << endl;
+        cout << "\t\t\t\t\t\t  +-------------+" << endl;
+
+        cout << endl;
+
+        display.print_board();
     }
 
     return 0;
